@@ -7,6 +7,9 @@ on:
       - main
       - master
 
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -15,7 +18,7 @@ jobs:
       - name: Descargar código
         uses: actions/checkout@v4
 
-      - name: Instalar Java
+      - name: Instalar Java 17
         uses: actions/setup-java@v4
         with:
           distribution: temurin
@@ -24,15 +27,23 @@ jobs:
       - name: Instalar Flutter
         uses: subosito/flutter-action@v2
         with:
-          flutter-version: stable
+          channel: stable
+          cache: true
+
+      - name: Ver versión Flutter
+        run: flutter --version
 
       - name: Instalar dependencias
         run: flutter pub get
 
+      - name: Analizar proyecto
+        run: flutter analyze
+        continue-on-error: true
+
       - name: Compilar APK debug
         run: flutter build apk --debug
 
-      - name: Subir APK como artefacto
+      - name: Subir APK
         uses: actions/upload-artifact@v4
         with:
           name: app-debug-apk
