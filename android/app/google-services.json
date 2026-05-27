@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "264780488100",
+    "project_id": "prototipodavid-4fe2c",
+    "storage_bucket": "prototipodavid-4fe2c.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:264780488100:android:82addbfbf7fc7b6e60f531",
+        "android_client_info": {
+          "package_name": "com.example.prototipodavid"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "264780488100-6m8k97tbk5nl1in4uqnfkerj4m3pov9r.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyARC-Av87ClJVHi1aPNiibQte4aa9WBv1Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "264780488100-6m8k97tbk5nl1in4uqnfkerj4m3pov9r.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
